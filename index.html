@@ -1,0 +1,92 @@
+<html>
+
+<body>
+    <title> My Family Book. </title>
+    <style>
+        #familyLabel {
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 40px;
+
+        }
+
+        #images {
+            height: auto;
+            width: auto;
+        }
+
+        #whoisthere {
+
+            margin-bottom: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #didf {
+            text-align: center;
+        }
+
+        #images23 {
+            text-align: center;
+        }
+
+        #label {
+            text-align: center;
+        }
+    </style>
+
+
+</body>
+
+<body>
+    <Section id="dis">
+
+        <h1 id="familyLabel">My Famiy Book</h1>
+        <div id="images23">
+            <img id="images" src="TitleImage.jpg">
+        </div>
+        <div id="label">
+            <label id="whoisthere">My Family</label>
+        </div>
+        <br>
+        <div id="didf">
+            <button onclick="update()" class="next">Next</button>
+        </div>
+    </Section>
+    <script>
+        var soruce = ["Me.jpeg","Aadit.jpeg", "mami.jpeg","Papa.jpeg"];
+        var names= ["Me-Ayaan","Brother-Aadit", "Mother-Riddhi", "Father-Puneet"];
+        var i = 0;
+       
+        function update() {
+            i++
+            
+            var numberOfFamilyMembers = 4;
+            if (i > numberOfFamilyMembers) {
+                i = 0;
+            }
+           
+            var updatedImage = soruce[i];
+            var updatedName =names[i];
+
+            document.getElementById("images").src = updatedImage;
+            document.getElementById("whoisthere").innerHTML = updatedName;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
